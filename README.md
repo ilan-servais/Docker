@@ -9,3 +9,5 @@ Après l'installation de Docker, nous avons utilisé les commandes suivantes pou
 ```sh
 docker --version
 docker info
+
+![Vérification de Docker](images/image.png)
