@@ -9,5 +9,8 @@ Après l'installation de Docker, nous avons utilisé les commandes suivantes pou
 ```sh
 docker --version
 docker info
+```
+
+La commande `docker --version` nous affiche la version installée, tandis que `docker info` donne plus de détails sur la configuration de Docker.
 
 ![Vérification de Docker](images/image.png)
