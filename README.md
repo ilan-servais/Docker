@@ -158,3 +158,9 @@ Après avoir arrêté un conteneur, nous avons utilisé la commande suivante pou
 docker rm NOM_DU_CONTENEUR
 ```
 ![Suppresion du conteneur](image/image14.png)
+
+## 🔹✅ Supprimer tous les conteneurs stoppés
+
+```sh
+docker rm $(docker ps -aq)
+```
