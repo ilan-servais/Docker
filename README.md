@@ -164,3 +164,46 @@ docker rm NOM_DU_CONTENEUR
 ```sh
 docker rm $(docker ps -aq)
 ```
+
+# 🔹 Suppression d’une image Docker
+
+Docker propose plusieurs façons de supprimer une image, selon qu’elle est utilisée ou non, et selon le niveau de nettoyage souhaité.
+
+---
+
+## ✅ 1️⃣ Supprimer une image spécifique
+
+Si nous voulons supprimer une **image unique**, nous pouvons utiliser son **nom** ou son **ID** :
+
+```sh
+docker rmi NOM_DE_L_IMAGE
+```
+ou
+```sh
+docker rmi ID_DE_L_IMAGE
+```
+
+## ✅ 2️⃣ Supprimer toutes les images non utilisées (prune)
+
+Si nous voulons supprimer toutes les images inutilisées, c'est-à-dire les images qui ne sont plus associées à un conteneur, nous pouvons utiliser :
+
+```sh
+docker image prune -a
+```
+
+## ✅ 3️⃣ Supprimer une image forcée (--force)
+
+Si Docker refuse de supprimer une image parce qu'elle est toujours utilisée par un conteneur, nous pouvons forcer la suppression avec :
+```sh
+docker rmi -f NOM_DE_L_IMAGE
+```
+ou
+```sh
+docker rmi --force NOM_DE_L_IMAGE
+```
+## ✅ 4️⃣ Supprimer toutes les images d’un coup
+
+Si nous voulons supprimer toutes les images Docker présentes sur la machine, nous pouvons utiliser :
+```sh
+docker rmi $(docker images -q)
+```
