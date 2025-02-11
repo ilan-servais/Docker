@@ -34,3 +34,15 @@ docker image
 ```
 
 ![Affichage des commands Docker disponibles](image/image3.png)
+
+## 🔹 Exécution d'un conteneur avec `docker run`
+
+La commande `docker run` permet de démarrer un conteneur à partir d'une image Docker.
+
+### ✅ Exécution simple
+Nous avons testé avec une image simple pour valider le bon fonctionnement de Docker :
+
+```sh
+docker run hello-world
+
+![Start conteneur à partir image Docker](image/image4.png)
