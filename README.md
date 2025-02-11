@@ -80,7 +80,7 @@ docker images
 
 ## 🔹 Construire et exécuter un conteneur avec `docker run`
 
-Nous avons utilisé la commande `docker run` pour exécuter notre conteneur et le rendre accessible via un navigateur.
+Nous avons utilisé la commande `docker run` pour exécuter notre conteneur et le rendre accessible via un navigateur à l'adresse http://localhost:8080
 
 ### ✅ Lancer le conteneur
 
@@ -89,3 +89,7 @@ docker run -it --rm -p 8080:80 docker/welcome-to-docker
 ```
 
 ![Exécution du conteneur Docker](image/image8.png)
+
+Voir les conteneurs Docker en cours d’exécution et y compris ceux qui sont arrêtés avec -a
+
+![Affichage des conteneurs actifs et invactifs](image/image9.png)
