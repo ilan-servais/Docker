@@ -23,4 +23,4 @@ Pour voir les conteneurs Docker en cours d’exécution (et y compris ceux qui s
 docker ps
 docker ps -a
 ```
-![Affichage des conteneurs actifs](image/image (2).png)
+![Affichage des conteneurs actifs](image/image2.png)
