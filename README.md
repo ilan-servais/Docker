@@ -149,3 +149,12 @@ docker run -d -p 8080:80 --name welcome-to-docker docker/welcome-to-docker
 ```
 
 ![Arrêt du conteneur](image/image13.png)
+
+## 🔹 Supprimer un conteneur avec `docker rm`
+
+Après avoir arrêté un conteneur, nous avons utilisé la commande suivante pour le supprimer définitivement :
+
+```sh
+docker rm NOM_DU_CONTENEUR
+```
+![Suppresion du conteneur](image/image14.png)
