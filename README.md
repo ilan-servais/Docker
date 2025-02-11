@@ -47,3 +47,13 @@ docker run hello-world
 ```
 
 ![Start conteneur à partir image Docker](image/image4.png)
+
+## 🔹 Arrêter un conteneur avec `docker stop`
+
+Lorsqu'un conteneur Docker tourne en arrière-plan, il peut être arrêté proprement avec la commande :
+
+```sh
+docker stop NOM_DU_CONTENEUR
+```
+
+![Stop Docker](image/image5.png)
