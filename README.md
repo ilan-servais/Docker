@@ -128,3 +128,24 @@ docker info
 ```
 ![docker info](image/image11.png)
 
+## 🔹 Arrêter un conteneur Docker
+
+Lorsqu'un conteneur est exécuté en **mode interactif** sans l'option `-d` (mode détaché), il **verrouille** le terminal, et il n'est plus possible de taper de nouvelles commandes.
+
+Dans ce cas, pour l'arrêter, nous avons utilisé :
+
+### ✅ Arrêter le conteneur avec `CTRL + C`
+
+Lorsque le conteneur est actif, nous avons simplement **fait `CTRL + C` dans le terminal** pour stopper son exécution.
+
+---
+
+### ✅ Exécuter un conteneur en arrière-plan pour pouvoir l'arrêter avec `docker stop`
+
+Si nous voulons **garder le terminal libre** et arrêter le conteneur avec `docker stop`, nous devons exécuter le conteneur en **mode détaché** (`-d`) et **sans `--rm`** pour éviter qu'il ne soit supprimé automatiquement :
+
+```sh
+docker run -d -p 8080:80 --name welcome-to-docker docker/welcome-to-docker
+```
+
+![Arrêt du conteneur](image/image13.png)
