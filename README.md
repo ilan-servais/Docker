@@ -77,3 +77,15 @@ docker images
 ```
 
 ![Afficher les images dispo](image/image7.png)
+
+## 🔹 Construire et exécuter un conteneur avec `docker run`
+
+Nous avons utilisé la commande `docker run` pour exécuter notre conteneur et le rendre accessible via un navigateur.
+
+### ✅ Lancer le conteneur
+
+```sh
+docker run -it --rm -p 8080:80 docker/welcome-to-docker
+```
+
+![Exécution du conteneur Docker](image/image8.png)
