@@ -67,3 +67,13 @@ docker pull docker/welcome-to-docker
 ```
 
 ![Pull image Docker](image/image6.png)
+
+## 🔹 Afficher les images disponibles avec `docker images`
+
+Après avoir récupéré des images avec `docker pull`, nous avons utilisé la commande suivante pour voir la liste des images disponibles localement :
+
+```sh
+docker images
+```
+
+![Afficher les images dispo](image/image7.png)
