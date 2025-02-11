@@ -57,3 +57,13 @@ docker stop NOM_DU_CONTENEUR
 ```
 
 ![Stop Docker](image/image5.png)
+
+## 🔹 Récupérer l’image "welcome-to-docker" avec `docker pull`
+
+Nous avons utilisé la commande `docker pull` pour récupérer une image de démonstration fournie par Docker :
+
+```sh
+docker pull docker/welcome-to-docker
+```
+
+![Pull image Docker](image/image6.png)
