@@ -14,3 +14,13 @@ docker info
 La commande `docker --version` nous affiche la version installée, tandis que `docker info` donne plus de détails sur la configuration de Docker.
 
 ![Vérification de Docker](image/image.png)
+
+## 🔹 Affichage des conteneurs actifs
+
+Pour voir les conteneurs Docker en cours d’exécution (et y compris ceux qui sont arrêtés avec -a) :
+
+```sh
+docker ps
+docker ps -a
+```
+![Affichage des conteneurs actifs](image/image.png)
