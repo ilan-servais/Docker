@@ -13,4 +13,4 @@ docker info
 
 La commande `docker --version` nous affiche la version installée, tandis que `docker info` donne plus de détails sur la configuration de Docker.
 
-![Vérification de Docker](images/image.png)
+![Vérification de Docker](image/image.png)
