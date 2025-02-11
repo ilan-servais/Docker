@@ -24,3 +24,13 @@ docker ps
 docker ps -a
 ```
 ![Affichage des conteneurs actifs](image/image2.png)
+
+## 🔹 Gestion des images Docker
+
+Docker propose plusieurs commandes pour gérer les images. En exécutant simplement :
+
+```sh
+docker image
+```
+
+![Affichage des commands Docker disponibles](image/image3.png)
