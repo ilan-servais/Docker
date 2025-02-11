@@ -44,5 +44,6 @@ Nous avons testé avec une image simple pour valider le bon fonctionnement de Do
 
 ```sh
 docker run hello-world
+```
 
 ![Start conteneur à partir image Docker](image/image4.png)
