@@ -182,6 +182,8 @@ ou
 ```sh
 docker rmi ID_DE_L_IMAGE
 ```
+![Suppresion de l'image](image/image15.png)
+
 
 ## ✅ 2️⃣ Supprimer toutes les images non utilisées (prune)
 
