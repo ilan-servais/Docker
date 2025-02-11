@@ -90,6 +90,41 @@ docker run -it --rm -p 8080:80 docker/welcome-to-docker
 
 ![Exécution du conteneur Docker](image/image8.png)
 
-Voir les conteneurs Docker en cours d’exécution et y compris ceux qui sont arrêtés avec -a
+## 🔹 Vérification de l'état des conteneurs et des images Docker
 
-![Affichage des conteneurs actifs et invactifs](image/image9.png)
+Après avoir lancé un conteneur, nous avons utilisé plusieurs commandes pour inspecter son état et obtenir des informations sur Docker.
+
+---
+
+### ✅ Afficher les conteneurs actifs avec `docker ps`
+
+La commande suivante permet de voir **tous les conteneurs en cours d’exécution** :
+
+```sh
+docker ps
+```
+
+![Affichage des conteneurs actifs et inactifs](image/image9.png)
+
+## 🔹 Vérification des images et des informations Docker
+
+Après avoir récupéré des images Docker et exécuté des conteneurs, nous avons utilisé plusieurs commandes pour inspecter leur état et obtenir des informations sur Docker.
+
+---
+
+### ✅ Voir les images disponibles avec `docker images`
+
+La commande suivante permet d'afficher toutes les images Docker stockées localement :
+
+```sh
+docker images
+```
+![docker images](image/image10.png)
+
+La commande suivante permet d'afficher des informations 
+
+```sh
+docker info
+```
+![docker info](image/image11.png)
+
