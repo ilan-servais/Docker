@@ -78,3 +78,58 @@ Puis, nous avons vérifié que la modification a bien été prise en compte avec
 cat /usr/share/nginx/html/index.html
 ```
 ![echo et cat et exit](image/image7.png)
+
+## 📌 6️⃣ Analyse du `Dockerfile` et persistance avec Docker Volume
+
+### ✅ Analyse du `Dockerfile`
+
+Nous avons affiché le contenu du `Dockerfile` avec :
+
+```sh
+cat Dockerfile
+```
+
+### 📌 Vérification et test du volume Docker
+
+### ✅ Vérification du montage du volume
+
+Nous avons vérifié que le volume était bien actif avec :
+
+```sh
+docker inspect welcome-container
+```
+## 📌 6️⃣ Correction du montage du volume Docker
+
+Nous avons constaté que **le volume était inversé** :  
+Docker montait **un volume interne** au lieu d'utiliser notre dossier local.
+
+---
+
+### ✅ Vérification du montage incorrect
+
+Nous avons utilisé la commande :
+
+```sh
+docker inspect welcome-container
+```
+---
+
+## ✅ Suppression et recréation du conteneur avec le bon volume
+
+Nous avons supprimé et recréé le conteneur en **corrigeant le montage du volume** :
+
+```sh
+docker stop welcome-container
+docker rm welcome-container
+docker run -d -p 8080:80 --name welcome-container -v "C:/Users/Servais/Documents/LaPlateforme/Job02/html:/usr/share/nginx/html" docker/welcome-to-docker
+```
+![docker run -d -p](image/image9.png)
+
+✅ Vérification du fichier monté dans le conteneur
+
+```sh
+docker exec -it welcome-container ls -la usr/share/nginx/html/
+docker exec -it welcome-container cat usr/share/nginx/html/index.html
+```
+![docker exec](image/image10.png)
+
