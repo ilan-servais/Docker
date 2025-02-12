@@ -46,3 +46,14 @@ docker ps
 ```
 ![docker ps](image/image4.png)
 
+## 📌 4️⃣ Accéder au conteneur et explorer son contenu
+
+### ✅ Donnez un nom personnalisé au conteneur
+
+Par défaut, si nous ne spécifions pas de nom, Docker attribue un **nom aléatoire** au conteneur, comme `heuristic_shannon`.  
+Pour éviter cela, nous pouvons lancer le conteneur avec un nom défini :
+
+```sh
+docker run -d -p 8080:80 --name welcome-container docker/welcome-to-docker
+```
+![docker exec](image/image5.png)
