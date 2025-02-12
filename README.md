@@ -1,4 +1,4 @@
-# 📦 Installation de Docker
+# 📦 Installation de Docker 🐳
 
 Ce projet documente l'installation et la configuration de Docker sur notre système.
 
