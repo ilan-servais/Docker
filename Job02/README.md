@@ -37,5 +37,12 @@ docker run -d -p 8080:80 docker/welcome-to-docker
 ```
 ![docker run](image/image3.png)
 
+## 📌 3️⃣ Vérification du conteneur avec `docker ps`
 
+Après l’exécution du conteneur, nous avons vérifié s’il est bien en cours d’exécution avec :
+
+```sh
+docker ps
+```
+![docker ps](image/image4.png)
 
