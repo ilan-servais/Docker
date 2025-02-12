@@ -13,7 +13,7 @@ docker info
 
 La commande `docker --version` nous affiche la version installée, tandis que `docker info` donne plus de détails sur la configuration de Docker.
 
-![Vérification de Docker](image/image.png)
+![Vérification de Docker](Job01/image/image.png)
 
 ## 🔹 Affichage des conteneurs actifs
 
@@ -23,7 +23,7 @@ Pour voir les conteneurs Docker en cours d’exécution (et y compris ceux qui s
 docker ps
 docker ps -a
 ```
-![Affichage des conteneurs actifs](image/image2.png)
+![Affichage des conteneurs actifs](Job01/image/image2.png)
 
 ## 🔹 Gestion des images Docker
 
@@ -33,7 +33,7 @@ Docker propose plusieurs commandes pour gérer les images. En exécutant simplem
 docker image
 ```
 
-![Affichage des commands Docker disponibles](image/image3.png)
+![Affichage des commands Docker disponibles](Job01/image/image3.png)
 
 ## 🔹 Exécution d'un conteneur avec `docker run`
 
@@ -46,7 +46,7 @@ Nous avons testé avec une image simple pour valider le bon fonctionnement de Do
 docker run hello-world
 ```
 
-![Start conteneur à partir image Docker](image/image4.png)
+![Start conteneur à partir image Docker](Job01/image/image4.png)
 
 ## 🔹 Arrêter un conteneur avec `docker stop`
 
@@ -56,7 +56,7 @@ Lorsqu'un conteneur Docker tourne en arrière-plan, il peut être arrêté propr
 docker stop NOM_DU_CONTENEUR
 ```
 
-![Stop Docker](image/image5.png)
+![Stop Docker](Job01/image/image5.png)
 
 ## 🔹 Récupérer l’image "welcome-to-docker" avec `docker pull`
 
@@ -66,7 +66,7 @@ Nous avons utilisé la commande `docker pull` pour récupérer une image de dém
 docker pull docker/welcome-to-docker
 ```
 
-![Pull image Docker](image/image6.png)
+![Pull image Docker](Job01/image/image6.png)
 
 ## 🔹 Afficher les images disponibles avec `docker images`
 
@@ -76,7 +76,7 @@ Après avoir récupéré des images avec `docker pull`, nous avons utilisé la c
 docker images
 ```
 
-![Afficher les images dispo](image/image7.png)
+![Afficher les images dispo](Job01/image/image7.png)
 
 ## 🔹 Construire et exécuter un conteneur avec `docker run`
 
@@ -88,7 +88,7 @@ Nous avons utilisé la commande `docker run` pour exécuter notre conteneur et l
 docker run -it --rm -p 8080:80 docker/welcome-to-docker
 ```
 
-![Exécution du conteneur Docker](image/image8.png)
+![Exécution du conteneur Docker](Job01/image/image8.png)
 
 ## 🔹 Vérification de l'état des conteneurs et des images Docker
 
@@ -104,7 +104,7 @@ La commande suivante permet de voir **tous les conteneurs en cours d’exécutio
 docker ps
 ```
 
-![Affichage des conteneurs actifs et inactifs](image/image9.png)
+![Affichage des conteneurs actifs et inactifs](Job01/image/image9.png)
 
 ## 🔹 Vérification des images et des informations Docker
 
@@ -119,14 +119,14 @@ La commande suivante permet d'afficher toutes les images Docker stockées locale
 ```sh
 docker images
 ```
-![docker images](image/image10.png)
+![docker images](Job01/image/image10.png)
 
 La commande suivante permet d'afficher des informations 
 
 ```sh
 docker info
 ```
-![docker info](image/image11.png)
+![docker info](Job01/image/image11.png)
 
 ## 🔹 Arrêter un conteneur Docker
 
@@ -148,7 +148,7 @@ Si nous voulons **garder le terminal libre** et arrêter le conteneur avec `dock
 docker run -d -p 8080:80 --name welcome-to-docker docker/welcome-to-docker
 ```
 
-![Arrêt du conteneur](image/image13.png)
+![Arrêt du conteneur](Job01/image/image13.png)
 
 ## 🔹 Supprimer un conteneur avec `docker rm`
 
@@ -157,7 +157,7 @@ Après avoir arrêté un conteneur, nous avons utilisé la commande suivante pou
 ```sh
 docker rm NOM_DU_CONTENEUR
 ```
-![Suppresion du conteneur](image/image14.png)
+![Suppresion du conteneur](Job01/image/image14.png)
 
 ## 🔹✅ Supprimer tous les conteneurs stoppés
 
@@ -182,7 +182,7 @@ ou
 ```sh
 docker rmi ID_DE_L_IMAGE
 ```
-![Suppresion de l'image](image/image15.png)
+![Suppresion de l'image](Job01/image/image15.png)
 
 
 ## ✅ 2️⃣ Supprimer toutes les images non utilisées (prune)
