@@ -2,6 +2,24 @@
 
 Dans cet exercice, nous allons analyser et utiliser l’image Docker `docker/welcome-to-docker`.
 
+# 📦 Welcome to Docker - Projet d'apprentissage
+
+Ce projet est un exemple pour apprendre les bases de Docker, notamment :
+- L’exécution d’un conteneur Docker
+- Le montage de volumes pour la persistance des fichiers
+- La publication d’une image sur Docker Hub
+
+---
+
+## ✅ Cloner le projet
+
+Avant de commencer, **clonez ce projet depuis GitHub** :
+
+```sh
+git clone https://github.com/docker/welcome-to-docker.git
+cd welcome-to-docker
+```
+
 ---
 
 ## 📌 1️⃣ Récupération de l’image Docker
@@ -25,8 +43,6 @@ Avant d’exécuter le conteneur, nous avons **analysé l’image** via Docker D
 - Permet de **visualiser les couches du Dockerfile**.
 - Affiche les **ports exposés** et la configuration.
 - Identifie d’éventuelles **vulnérabilités** dans l’image.
-
----
 
 ### ✅ Exécution du conteneur
 
@@ -103,8 +119,6 @@ docker inspect welcome-container
 Nous avons constaté que **le volume était inversé** :  
 Docker montait **un volume interne** au lieu d'utiliser notre dossier local.
 
----
-
 ### ✅ Vérification du montage incorrect
 
 Nous avons utilisé la commande :
@@ -112,8 +126,6 @@ Nous avons utilisé la commande :
 ```sh
 docker inspect welcome-container
 ```
----
-
 ## ✅ Suppression et recréation du conteneur avec le bon volume
 
 Nous avons supprimé et recréé le conteneur en **corrigeant le montage du volume** :
@@ -186,3 +198,48 @@ Nous avons vérifié que l’image était bien publiée en allant sur :
 
 ![dockerhub](image/image13.png)
 
+## ✅ 6. Tester une image Docker depuis une autre source
+
+Dans le cadre de notre apprentissage Docker, nous avons également testé l’exécution d’une image Docker créée par une collègue : **`saabs/welcome-to-docker`**.
+
+### ✅ Lancer l’image d’un autre utilisateur
+
+Nous avons utilisé la commande suivante pour exécuter l’image de `saabs` :
+
+```sh
+docker run -d -p 8088:80 saabs/welcome-to-docker
+```
+![docker run](image/image14.png)
+
+## ✅ 7. Construire et exécuter une image modifiée
+Nous avons également testé la reconstruction d’une image Docker basée sur celle de saabs.
+
+# ✅ Construire une nouvelle image basée sur saabs/welcome-to-docker
+Nous avons utilisé la commande suivante pour construire l’image :
+
+```sh
+docker build -t saabs/welcome-to-docker .
+```
+![docker build](image/image15.png)
+
+Ensuite, nous avons exécuté cette image en modifiant le port pour éviter tout conflit :
+
+```sh
+docker run -d -p 8089:3000 saabs/welcome-to-docker
+```
+![docker run](image/image16.png)
+📸 Capture d’écran de l’exécution :
+
+Nous avons accédé à notre version modifiée sur http://localhost:8089.
+
+![localhost:8089](image/image17.png)
+
+
+# 🎯 Conclusion
+
+Nous avons : ✅ Installé et configuré Docker
+✅ Corrigé les erreurs de montage de volumes
+✅ Modifié un fichier en live et testé la persistance
+✅ Publié l’image sur Docker Hub pour la partager
+✅ Testé une image Docker d’un autre utilisateur
+✅ Reconstruit et modifié une image existante avec Docker
