@@ -57,3 +57,24 @@ Pour éviter cela, nous pouvons lancer le conteneur avec un nom défini :
 docker run -d -p 8080:80 --name welcome-container docker/welcome-to-docker
 ```
 ![docker exec](image/image5.png)
+
+## 📌 5️⃣ Modifier un fichier dans le conteneur et voir le résultat
+
+Nous avons accédé à notre conteneur et trouvé l’emplacement des fichiers HTML avec :
+
+```sh
+ls -la /usr/share/nginx/html/
+```
+![ls -la /usr](image/image6.png)
+
+### ✅ Modification du fichier index.html
+Nous avons remplacé son contenu par un message personnalisé avec la commande :
+
+```sh
+echo "Bonjour depuis Docker !" > /usr/share/nginx/html/index.html
+```
+Puis, nous avons vérifié que la modification a bien été prise en compte avec :
+```sh
+cat /usr/share/nginx/html/index.html
+```
+![echo et cat et exit](image/image7.png)
