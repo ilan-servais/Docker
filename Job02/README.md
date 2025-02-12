@@ -133,3 +133,56 @@ docker exec -it welcome-container cat usr/share/nginx/html/index.html
 ```
 ![docker exec](image/image10.png)
 
+# 📦🐳 Publication de l'image Docker sur Docker Hub
+
+Maintenant que l’image fonctionne localement, nous avons procédé à sa publication sur Docker Hub.
+
+---
+
+## ✅ 1. Se connecter à Docker Hub
+
+Avant de pousser une image, il faut être **connecté à Docker Hub**.  
+
+```sh
+docker login
+```
+(Si vous êtes déjà connecté à Docker Desktop, cette étape peut être optionnelle.)
+
+## ✅ 2. Créer une image Docker à partir du conteneur
+
+Nous avons vérifié l'ID du conteneur en exécutant :
+
+```sh
+docker ps
+```
+Puis nous avons transformé notre conteneur en image Docker :
+
+```sh
+docker commit <ID_DU_CONTENEUR> ilanunderscore/welcome-docker
+```
+![docker commit](image/image11.png)
+
+## ✅ 3. Taguer l’image pour Docker Hub
+
+Avant de la pousser sur Docker Hub, nous avons ajouté un "tag" correspondant à notre identifiant Docker Hub :
+
+```sh
+docker tag welcome-docker ilanunderscore/welcome-docker:latest
+```
+
+## ✅ 4. Envoyer l’image sur Docker Hub
+
+Nous avons ensuite poussé l’image sur Docker Hub avec :
+
+```sh
+docker push ilanunderscore/welcome-docker:latest
+```
+![docker push](image/image12.png)
+
+## ✅ 5. Vérifier l’image sur Docker Hub
+
+Nous avons vérifié que l’image était bien publiée en allant sur :
+🔗 Docker Hub - ilanunderscore/welcome-docker
+
+![dockerhub](image/image13.png)
+
