@@ -193,7 +193,7 @@ docker push ilanunderscore/welcome-docker:latest
 
 ## ✅ 5. Vérifier l’image sur Docker Hub
 
-Nous avons vérifié que l’image était bien publiée en allant sur :
+Nous avons vérifié que l’image était bien publiée en allant sur :  
 🔗 Docker Hub - ilanunderscore/welcome-docker
 
 ![dockerhub](image/image13.png)
@@ -228,18 +228,17 @@ Ensuite, nous avons exécuté cette image en modifiant le port pour éviter tout
 docker run -d -p 8089:3000 saabs/welcome-to-docker
 ```
 ![docker run](image/image16.png)
-📸 Capture d’écran de l’exécution :
 
 Nous avons accédé à notre version modifiée sur http://localhost:8089.
 
 ![localhost:8089](image/image17.png)
 
-
 # 🎯 Conclusion
 
-Nous avons : ✅ Installé et configuré Docker
-✅ Corrigé les erreurs de montage de volumes
-✅ Modifié un fichier en live et testé la persistance
-✅ Publié l’image sur Docker Hub pour la partager
-✅ Testé une image Docker d’un autre utilisateur
-✅ Reconstruit et modifié une image existante avec Docker
+Nous avons :  
+✅ Installé et configuré Docker  
+✅ Corrigé les erreurs de montage de volumes  
+✅ Modifié un fichier en live et testé la persistance  
+✅ Publié l’image sur Docker Hub pour la partager  
+✅ Testé une image Docker d’un autre utilisateur  
+✅ Reconstruit et modifié une image existante avec Docker  
