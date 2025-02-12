@@ -19,7 +19,7 @@ docker pull docker/welcome-to-docker
 Avant d’exécuter le conteneur, nous avons **analysé l’image** via Docker Desktop.
 
 📸 **Analyse de l’image dans Docker Desktop :**  
-![Analyse Docker Desktop](image/image2)
+![Analyse Docker Desktop](image/image2.png)
 
 ### ✅ Explication :
 - Permet de **visualiser les couches du Dockerfile**.
@@ -35,4 +35,7 @@ Nous avons lancé le conteneur avec la commande :
 ```sh
 docker run -d -p 8080:80 docker/welcome-to-docker
 ```
+![docker run](image/image3.png)
+
+
 
