@@ -181,6 +181,7 @@ Avant de la pousser sur Docker Hub, nous avons ajouté un "tag" correspondant à
 ```sh
 docker tag welcome-docker ilanunderscore/welcome-docker:latest
 ```
+![docker tag](image/image18.png)
 
 ## ✅ 4. Envoyer l’image sur Docker Hub
 
@@ -233,12 +234,73 @@ Nous avons accédé à notre version modifiée sur http://localhost:8089.
 
 ![localhost:8089](image/image17.png)
 
+## 🚀 8. Publication de l’image modifiée sur Docker Hub
+Après avoir validé notre version modifiée en local, nous avons décidé de la publier sur Docker Hub pour la rendre accessible à d'autres membres de notre promo.
+
+### ✅ Nettoyage de l’environnement
+
+Avant de reconstruire l’image proprement, nous avons supprimé les anciennes versions :
+
+```sh
+docker stop $(docker ps -aq)  # Arrêter tous les conteneurs
+docker rm $(docker ps -aq)    # Supprimer tous les conteneurs
+docker image prune -a -f      # Supprimer les images inutilisées
+```
+
+### ✅ Reconstruction de l’image modifiée
+Nous avons ensuite reconstruit notre image sous un nouveau nom :
+
+```sh
+docker build -t projet_terminer .
+```
+![docker build](image/image19.png)
+
+### ✅ Connexion à Docker Hub
+
+Pour pouvoir envoyer notre image, nous avons d'abord vérifié notre connexion :
+
+```sh
+docker login
+```
+Si nécessaire, nous avons entré nos identifiants Docker Hub.
+
+### ✅ Tag de l’image pour Docker Hub
+
+Docker Hub exige que les images suivent un format spécifique (<dockerhub_username>/<image_name>:tag). 
+Nous avons donc renommé notre image avant de l’envoyer :
+
+```sh
+docker tag projet_terminer mon_dockerhub_username/projet_terminer:latest
+```
+### ✅ Push de l’image sur Docker Hub
+
+Une fois l’image taguée, nous l’avons publiée sur Docker Hub :
+
+```sh
+docker push mon_dockerhub_username/projet_terminer:latest
+```
+
+## 📥 Récupération et exécution de l’image par un autre utilisateur
+
+Un membre de notre promo a pu télécharger et exécuter l’image avec ces commandes :
+
+```sh
+docker pull mon_dockerhub_username/projet_terminer:latest
+docker run -d -p 8089:3000 mon_dockerhub_username/projet_terminer
+```
+![docker run](image/image16.png)
+
+![localhost de l'image modifiée](image/image20.png)
+
+Nous avons ainsi validé que notre image modifiée était bien accessible depuis Docker Hub et fonctionnelle sur une autre machine.
+
 # 🎯 Conclusion
 
-Nous avons :  
-✅ Installé et configuré Docker  
-✅ Corrigé les erreurs de montage de volumes  
-✅ Modifié un fichier en live et testé la persistance  
-✅ Publié l’image sur Docker Hub pour la partager  
-✅ Testé une image Docker d’un autre utilisateur  
-✅ Reconstruit et modifié une image existante avec Docker  
+Dans ce projet, nous avons appris à :
+
+✅Télécharger et exécuter une image existante depuis Docker Hub.  
+✅Modifier une image Docker en changeant son contenu.  
+✅Recréer une image Docker personnalisée.  
+✅Publier cette image sur Docker Hub.  
+✅Partager notre image avec un autre membre de notre promo et valider son bon fonctionnement.  
+✅Docker nous permet donc d’automatiser la création et le partage d’environnements de développement, tout en assurant une portabilité maximale. 🚀
