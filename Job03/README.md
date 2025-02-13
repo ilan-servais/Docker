@@ -106,17 +106,41 @@ http://localhost:8700
 
 ### 🛑 Arrêt et nettoyage
 
-Une fois terminé, vous pouvez arrêter tous les conteneurs :
+Une fois terminé, vous pouvez arrêter les conteneurs en utilisant l'ID d'un conteneur spécifique :
+
+```sh
+docker stop <CONTAINER_ID>
+```
+![docker stop ID](/Job03/image/image8.png)
+
+Ou simplement depuis Docker Desktop :
+
+![docker stop ID](/Job03/image/image9.png)
+
+Ou vous pouvez arrêter tous les conteneurs :
 
 ```sh
 docker stop $(docker ps -q)
 ```
 
-Ou supprimer l’image Docker :
+#### Supprimer le container 
+
+```sh
+docker rmi <CONTAINER_ID>
+```
+Ou
+```sh
+docker container prune
+```
+
+#### Supprimer l’image docker de Super Mario
 
 ```sh
 docker rmi pengbai/docker-supermario
 ```
+Ou simplement depuis Docker Desktop :
+
+![docker supprimer manuellement](/Job03/image/image10.png)
 
 ## 🎯 Résultat attendu
 
