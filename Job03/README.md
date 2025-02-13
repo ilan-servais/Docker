@@ -95,12 +95,13 @@ Exécutez cette commande pour exécuter une seconde version sur un autre port :
 ```sh
 docker run -d --rm -p 8700:8080 pengbai/docker-supermario
 ```
+![docker run 2](/Job03/image/image6.png)
 
 Puis, ouvrez :
 
 http://localhost:8700
 
-📸 Capture d’écran avec les deux jeux ouverts.
+![docker run double instance](/Job03/image/image7.png)
 
 ### 🛑 Arrêt et nettoyage
 
