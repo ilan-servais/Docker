@@ -13,13 +13,14 @@ Ce projet est un exemple pour apprendre les bases de Docker, notamment :
 
 ## ✅ Cloner le projet
 
-Avant de commencer, **clonez ce projet depuis GitHub** :
+Avant de commencer, **récupérez l’image officielle depuis Docker Hub** :
 
 ```sh
-git clone https://github.com/docker/welcome-to-docker.git
-cd welcome-to-docker
+docker pull saabs/welcome-to-docker
 ```
-
+```sh
+docker run -d -p 8089:3000 saabs/welcome-to-docker
+```
 ---
 
 ## 📌 1️⃣ Récupération de l’image Docker
