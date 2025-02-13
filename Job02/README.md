@@ -18,6 +18,7 @@ Avant de commencer, **récupérez l’image officielle depuis Docker Hub** :
 ```sh
 docker pull saabs/welcome-to-docker
 ```
+Ensuite, exécutez cette image pour la tester en local :
 ```sh
 docker run -d -p 8089:3000 saabs/welcome-to-docker
 ```
