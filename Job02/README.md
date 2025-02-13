@@ -114,7 +114,7 @@ Nous avons vérifié que le volume était bien actif avec :
 ```sh
 docker inspect welcome-container
 ```
-## 📌 6️⃣ Correction du montage du volume Docker
+## 📌 7️⃣ Correction du montage du volume Docker
 
 Nous avons constaté que **le volume était inversé** :  
 Docker montait **un volume interne** au lieu d'utiliser notre dossier local.
