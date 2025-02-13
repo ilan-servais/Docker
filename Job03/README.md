@@ -128,6 +128,8 @@ docker stop $(docker ps -q)
 ```sh
 docker rmi <CONTAINER_ID>
 ```
+![docker rmi](/Job03/image/image11.png)
+
 Ou
 ```sh
 docker container prune
