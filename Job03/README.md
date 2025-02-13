@@ -89,7 +89,8 @@ http://localhost:8600
 
 ![docker images](/Job03/image/image5.png)
 
-4️⃣ Lancer une seconde instance sur un autre port
+### 5️⃣ Lancer une seconde instance sur un autre port
+
 Exécutez cette commande pour exécuter une seconde version sur un autre port :
 
 ```sh
