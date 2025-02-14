@@ -1,20 +1,19 @@
-# Utiliser l'image officielle Nginx avec PHP
+# Utiliser PHP avec FPM et installer Nginx
 FROM php:8.2-fpm
 
-# Installer Nginx
 RUN apt-get update && apt-get install -y nginx \
     && rm -rf /var/lib/apt/lists/*
 
-# Copier les fichiers du jeu dans le conteneur
+# 🔥 FORCER la création du dossier et vérifier son existence
+RUN mkdir -p /var/www/html && ls -l /var/ && ls -l /var/www/
+
+# Copier les fichiers dans l’image
 COPY index.html /var/www/html/index.html
 COPY index.php /var/www/html/index.php
 COPY save.php /var/www/html/save.php
+COPY results.json /var/www/html/results.json
 
-# Créer le volume pour stocker les résultats
-VOLUME [ "/var/www/html/results.json" ]
-
-# Exposer le port 80 pour accéder au jeu
+# Exposer le port
 EXPOSE 80
 
-# Lancer Nginx et PHP
 CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
