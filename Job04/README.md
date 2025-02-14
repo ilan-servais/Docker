@@ -10,7 +10,7 @@ Ajoute la commande PHP suivante (10 caractères) pour afficher les infos du serv
 ```sh
 <?php phpinfo(); ?>
 ```
- ![php phpinfo](Job04/image/image1.png)
+ ![php phpinfo](/Job04/image/image1.png)
  
 ## 🛠️ Étape 2 : Création du Dockerfile
 
@@ -42,21 +42,21 @@ Construire l’image Docker :
 ```sh
 docker build -t mon-serveur-php .
 ```
- ![docker build -t mon-serveur-php .](Job04/image/image2.png)
+ ![docker build -t mon-serveur-php .](/Job04/image/image2.png)
 
 Lancer le conteneur en exposant le port 80 sur le port 8080 :
 
 ```sh
 docker run -d -p 8080:80 --name mon-serveur mon-serveur-php
 ```
- ![docker run -d -p 8080:80 --name](Job04/image/image3.png)
+ ![docker run -d -p 8080:80 --name](/Job04/image/image3.png)
 
 Vérifie que le conteneur tourne :
 
 ```sh
 docker ps
 ```
- ![docker ps](Job04/image/image4.png)
+ ![docker ps](/Job04/image/image4.png)
 
 ## 🌍 Étape 4 : Tester le serveur
 
@@ -64,7 +64,7 @@ docker ps
 
 👉 http://localhost:8080
 
- ![localhost](Job04/image/image5.png)
+ ![localhost](/Job04/image/image5.png)
 
 ## 🛑 Étape 5 : Arrêter proprement le conteneur
 
@@ -74,5 +74,5 @@ docker ps
 docker stop mon-serveur
 docker rm mon-serveur
 ```
- ![docker stop docker rm](Job04/image/image6.png)
+ ![docker stop docker rm](/Job04/image/image6.png)
 
