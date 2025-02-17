@@ -89,6 +89,7 @@ INSERT INTO users (name) VALUES ('Ilan'), ('Servais');
 3️⃣ Vérifier les données via l'API
 
 Ouvrir http://localhost:3000/users et vérifier que le message.
+![backend](/Job06/image/backend2.png)
 
 ### 🛠 Débogage
 
