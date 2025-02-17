@@ -39,16 +39,16 @@ cd job06
 ```bash
 docker-compose up --build -d
 ```
-![docker-compose](Job06/image/image2.png)
+![docker-compose](/Job06/image/image2.png)
 
 L'option -d exécute les conteneurs en arrière-plan.
 
 ### 🌐 Accès aux services
 
 Frontend (Nginx) : http://localhost:8080  
-![frontend](Job06/image/image1.png)
+![frontend](/Job06/image/image1.png)
 Backend (API) : http://localhost:3000  
-![backend](Job06/image/backend.png)
+![backend](/Job06/image/backend.png)
 Liste des utilisateurs (API) : http://localhost:3000/users  
 Adminer (gestion de la base de données) : http://localhost:8081  
 Serveur : mysql_container  
@@ -62,7 +62,7 @@ Base de données : projetdb
 1️⃣ Se connecter à MySQL via Adminer
 
 Aller sur http://localhost:8081
-![adminer](Job06/image/adminer.png)
+![adminer](/Job06/image/adminer.png)
 
 Renseigner :  
 
@@ -70,7 +70,7 @@ Serveur : mysql_container
 Utilisateur : root  
 Mot de passe : root    
 Base de données : projetdb  
-![adminer2](Job06/image/adminer2.png)
+![adminer2](/Job06/image/adminer2.png)
 
 2️⃣ Créer une table users  
 
