@@ -83,6 +83,8 @@ CREATE TABLE users (
 );
 INSERT INTO users (name) VALUES ('Ilan'), ('Servais');
 ```
+![adminer3](/Job06/image/adminer3.png)
+
 
 3️⃣ Vérifier les données via l'API
 
