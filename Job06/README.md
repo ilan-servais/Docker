@@ -46,9 +46,9 @@ L'option -d exécute les conteneurs en arrière-plan.
 ### 🌐 Accès aux services
 
 Frontend (Nginx) : http://localhost:8080  
-![frontend](/Job06/image/image1.png)
+![frontend](/Job06/image/image1.png)  
 Backend (API) : http://localhost:3000  
-![backend](/Job06/image/backend.png)
+![backend](/Job06/image/backend.png)  
 Liste des utilisateurs (API) : http://localhost:3000/users  
 Adminer (gestion de la base de données) : http://localhost:8081  
 Serveur : mysql_container  
