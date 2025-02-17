@@ -80,7 +80,7 @@
         const cells = document.querySelectorAll('td');
 
         async function saveResults(winner) {
-            const response = await fetch('/save', {
+            const response = await fetch('/save.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ winner }),
