@@ -79,73 +79,11 @@ Cela va installer Symfony dans le dossier app à l'intérieur du conteneur.
 
 Une fois l'installation de Symfony terminée, tu peux vérifier si ton application fonctionne en accédant à http://localhost:8080 dans ton navigateur.
 
+![homepage Symfony](/Job07/UNIT_SYMFONY/image/image7.png)
 
+#### Notes supplémentaires
 
+Nginx : Si tu rencontres des problèmes d'accès ou des erreurs 504, vérifie la configuration de Nginx et assure-toi que le fichier default.conf dans le dossier nginx/ pointe bien vers le bon dossier public/ de Symfony.
 
+Base de données : Si tu utilises une base de données MySQL, assure-toi que la connexion est correctement configurée dans le fichier .env de Symfony.
 
-
-
-# Projet Symfony avec Docker
-
-Ce projet est une application Symfony configurée pour tourner dans un environnement Docker. Ce guide documente les étapes nécessaires pour faire tourner l'application sur un serveur local avec Docker.
-
-### Prérequis
-
-- Docker et Docker Compose doivent être installés sur votre machine.
-- Composer doit être installé dans le conteneur Symfony.
-
-### Installation
-
-1. Cloner ce projet
-
-```bash
-git clone <URL du dépôt Git>
-cd <nom du dossier du projet>
-```
-
-2. Construire et démarrer les conteneurs Docker
-```bash
-docker-compose up -d --build
-```
-Cette commande va reconstruire les conteneurs si nécessaire et les démarrer en arrière-plan.
-
-3. Accéder à l'application Symfony
-
-Une fois les conteneurs démarrés, tu peux accéder à l'application Symfony via ton navigateur à l'adresse suivante :
-
-http://localhost:8080
-
-4. Accéder à PhpMyAdmin et Adminer (facultatif)
-
-PhpMyAdmin : http://localhost:8082
-Adminer : http://localhost:8081
-Cela te permet de gérer ta base de données MySQL directement via l'interface.
-
-### Configuration
-
-1. Nginx
-Le fichier de configuration Nginx est situé dans le dossier nginx/default.conf. Il a été configuré pour utiliser le dossier public/ de Symfony comme racine du site et rediriger les requêtes PHP vers le conteneur symfony_app via FastCGI.
-
-2. Base de données
-Le projet utilise MySQL comme base de données, et les informations de connexion sont stockées dans le fichier .env de Symfony.
-
-Commandes utiles
-
-Vider le cache Symfony :
-
-```bash
-docker exec -it symfony_app php bin/console cache:clear
-```
-
-Démarrer le serveur Symfony localement :
-
-Si tu veux tester l'application sans Nginx, tu peux démarrer le serveur Symfony localement :
-
-```bash
-docker exec -it symfony_app php bin/console server:start 0.0.0.0:8000
-```
-Accède à l'application à http://localhost:8000.
-
-## Problèmes courants
-
-Problème 504 Gateway Timeout : Si tu obtiens un message "504 Gateway Timeout", cela signifie généralement que Nginx ne parvient pas à communiquer avec le serveur PHP. Vérifie que le conteneur symfony_app fonctionne correctement et que les ports sont correctement mappés.
