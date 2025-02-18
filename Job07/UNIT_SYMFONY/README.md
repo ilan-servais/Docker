@@ -1,3 +1,5 @@
+# 🎼 Projet Symfony avec Docker
+
 ## Étape 1 : Préparer l'environnement
 
 Vérification des versions Docker et Docker Compose :
