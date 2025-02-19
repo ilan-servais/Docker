@@ -116,3 +116,39 @@ symfony/website-skeleton : Installe un projet plus complet, avec des bundles com
 
 symfony/skeleton : Installe une base minimale de Symfony, ce qui te permet d'ajouter uniquement les composants dont tu as besoin, avec une personnalisation plus fine.
 
+L'installation via symfony/website-skeleton installe un projet prêt à l'emploi avec une configuration par défaut. Tu obtiens immédiatement des outils comme Twig (pour le templating) et Doctrine (pour la base de données).
+
+L'installation via symfony/skeleton, en revanche, te donne un projet vide avec juste les dépendances de base, comme symfony/framework-bundle. Il te faudra ajouter chaque composant manuellement, ce qui peut être plus flexible mais aussi plus long.
+
+Exemple de commandes pour tester la différence :
+
+Installation avec symfony/website-skeleton :
+
+```bash
+composer create-project symfony/website-skeleton project_website
+```
+Inclut Twig, Doctrine et d'autres configurations prêtes à l'emploi.
+
+Installation avec symfony/skeleton :
+
+```bash
+composer create-project symfony/skeleton project_skeleton
+```
+L'installation via symfony/website-skeleton installe un projet prêt à l'emploi avec une configuration par défaut. Tu obtiens immédiatement des outils comme Twig (pour le templating) et Doctrine (pour la base de données).
+
+L'installation via symfony/skeleton, en revanche, te donne un projet vide avec juste les dépendances de base, comme symfony/framework-bundle. 
+Il te faudra ajouter chaque composant manuellement, ce qui peut être plus flexible mais aussi plus long.
+
+Exemple de commandes pour tester la différence :
+
+Installation avec symfony/website-skeleton :
+```bash
+composer create-project symfony/website-skeleton project_website
+```
+Inclut Twig, Doctrine et d'autres configurations prêtes à l'emploi.
+
+Installation avec symfony/skeleton :
+```bash
+composer create-project symfony/skeleton project_skeleton
+```
+Un projet minimal, sans composants supplémentaires.
