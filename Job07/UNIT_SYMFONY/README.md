@@ -87,28 +87,8 @@ Une fois l'installation de Symfony terminée, tu peux vérifier si ton applicati
 
 Voici la structure de dossiers du projet :
 
-UNIT_SYMFONY/
-├── app/                      # Dossier contenant les fichiers Symfony  
-│   ├── bin/                  # Fichiers d'exécution Symfony (bin/console, etc.)  
-│   ├── config/               # Fichiers de configuration Symfony  
-│   ├── public/               # Dossier public contenant index.php et les assets (images, JS, CSS)  
-│   ├── src/                  # Code source de l'application (Controllers, Entity, etc.)  
-│   ├── templates/            # Templates Twig  
-│   ├── translations/         # Fichiers de traduction  
-│   ├── var/                  # Dossier de cache, logs, etc.  
-│   ├── vendor/               # Dépendances installées via Composer  
-│   ├── .env                  # Fichier de configuration de l'environnement  
-│   ├── .env.dev              # Fichier de configuration spécifique au développement  
-│   ├── .env.test             # Fichier de configuration pour les tests  
-│   ├── composer.json         # Dépendances du projet  
-│   ├── composer.lock         # Lock des versions de dépendances  
-│   └── symfony.lock          # Fichier de verrouillage de Symfony  
-├── docker-compose.yml        # Configuration de Docker et des conteneurs  
-├── Dockerfile                # Dockerfile pour le conteneur PHP (symfony_app)  
-├── nginx/                    # Configuration de Nginx  
-│   └── default.conf          # Fichier de configuration Nginx  
-├── .gitignore                # Fichier pour ignorer certains fichiers (comme .env, .env.dev, .env.test)  
-└── README.md                 # Documentation du projet  
+![structure de dossiers Symfony](/Job07/UNIT_SYMFONY/image/image8.png)
+
 
 #### Notes supplémentaires
 
