@@ -95,3 +95,24 @@ Voici la structure de dossiers du projet :
 Nginx : Si tu rencontres des problèmes d'accès ou des erreurs 504, vérifie la configuration de Nginx et assure-toi que le fichier default.conf dans le dossier nginx/ pointe bien vers le bon dossier public/ de Symfony.
 
 Base de données : Si tu utilises une base de données MySQL, assure-toi que la connexion est correctement configurée dans le fichier .env de Symfony.
+
+
+## Autre commande possible qui installe une autre forme de projet Symfony
+
+Nous avons déjà parlé de l'installation via symfony/website-skeleton, qui est l'option la plus courante.
+Une autre commande possible est l'installation via symfony/skeleton. Cette commande installe un projet très minimal, à partir duquel tu peux ajouter manuellement les composants dont tu as besoin.
+
+Commande alternative :
+
+```bash
+composer create-project symfony/skeleton app
+```
+
+Cela installe uniquement les composants de base, comme symfony/framework-bundle, sans fonctionnalités supplémentaires. Tu devras ajouter manuellement des bundles comme Twig, Doctrine, etc., si tu en as besoin.
+
+Différence entre les deux commandes :
+
+symfony/website-skeleton : Installe un projet plus complet, avec des bundles comme Twig, Doctrine, et une configuration prête à l'emploi pour un site web.
+
+symfony/skeleton : Installe une base minimale de Symfony, ce qui te permet d'ajouter uniquement les composants dont tu as besoin, avec une personnalisation plus fine.
+
