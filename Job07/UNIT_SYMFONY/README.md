@@ -401,7 +401,7 @@ Un autre problème majeur provenait de la configuration de PHP localement, car j
 Fichier HTML corrompu :
 
 Lors du processus d'installation et de configuration du projet, un fichier HTML corrompu a été téléchargé plusieurs fois, ce qui a causé des erreurs pendant l'exécution des commandes. Ce fichier semblait être invalide et empêchait toute action dans le répertoire de travail, notamment en tentant d'accéder au dossier /var/www/html.
-Voici un exemple de ce que le terminal affichait lors de l'exécution des commandes :
+Voici un exemple de ce que le terminal affichait lors de l'exécution des commandes:
 ```bash
 root@1e334afdc0a6:/var/www/html# ls -la
 ls: cannot open directory '.': No such file or directory
@@ -414,8 +414,10 @@ drwxr-xr-x 1 root root 4096 Feb  4 04:22 ..
 d????????? ? ?    ?       ?            ? html
 root@1e334afdc0a6:/var/www#
 ```
-Comme on peut le voir dans les logs ci-dessus, le système ne pouvait même pas accéder au répertoire html, ce qui bloquait l'exécution des commandes et empêchait la bonne mise en place de l'environnement de travail. Cela ressemblait à une sorte de fichier illisible, avec des permissions corrompues qui empêchaient toute manipulation.
+Comme on peut le voir dans les logs ci-dessus, le système ne pouvait même pas accéder au répertoire html, ce qui bloquait l'exécution des commandes et empêchait la bonne mise en place de l'environnement de travail. 
+Cela ressemblait à une sorte de fichier illisible, avec des permissions corrompues qui empêchaient toute manipulation.
 
-Bien que je n'ai pas de capture d'écran du fichier, il était visuellement étrange avec des caractères de permissions indéfinis (d?????????) et un comportement qui ne correspondait pas à un répertoire valide. Après avoir nettoyé les caches et supprimé les fichiers corrompus, le projet a pu être réinstallé et fonctionner normalement.
+Bien que je n'ai pas de capture d'écran du fichier, il était visuellement étrange avec des caractères de permissions indéfinis (d?????????) et un comportement qui ne correspondait pas à un répertoire valide. 
+Après avoir nettoyé les caches et supprimé les fichiers corrompus, le projet a pu être réinstallé et fonctionner normalement.
 
 ![Symfony 7.2.3](/Job07/UNIT_SYMFONY/image/image14.png)
