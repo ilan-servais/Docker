@@ -384,7 +384,7 @@ php bin/console doctrine:database:create
 
 Cela supprimera et recréera la base de données avant d'y ajouter de nouvelles données.
 
-## Résolution des problèmes rencontrés
+# ⚠️ Résolution des problèmes rencontrés
 
 Pendant le processus de configuration de Symfony, plusieurs défis ont été rencontrés et résolus, notamment :
 
